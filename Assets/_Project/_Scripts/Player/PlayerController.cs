@@ -1,4 +1,5 @@
 using System;
+using _Project._Scripts;
 using Managers;
 using Game;
 using Input;
@@ -7,7 +8,7 @@ namespace Player {
     public class PlayerController : MonoBehaviour {
         [SerializeField] PlayerInputProcessor inputProcessor;
         [SerializeField] float moveSpeed;
-        [SerializeField] Bullet bullet;
+        [SerializeField] BulletFactory bulletFactory;
         Rigidbody rb;
         Vector3 velocity, direction;
         void OnEnable() {
@@ -34,8 +35,7 @@ namespace Player {
         }
 
         void Attack() {
-            Bullet newBullet = Instantiate(bullet, transform.position, Quaternion.identity);
-            newBullet.Initialize(direction);
+            bulletFactory.CreateBullet(transform.position, direction);
         }
         
         void OnCollisionEnter(Collision other) {
