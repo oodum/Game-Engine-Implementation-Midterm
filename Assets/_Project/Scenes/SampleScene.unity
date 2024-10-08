@@ -582,7 +582,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   inputProcessor: {fileID: 11400000, guid: e058d6e8751cc16cd93c4a7f870e9371, type: 2}
   moveSpeed: 4.71
-  bullet: {fileID: 243408700185539643, guid: 0aead2b3484a753e4bf34ce73f798fcd, type: 3}
+  bulletFactory: {fileID: 1402246381}
 --- !u!4 &891415986
 Transform:
   m_ObjectHideFlags: 0
@@ -975,6 +975,51 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1353283742}
   m_CullTransparentMesh: 1
+--- !u!1 &1402246380
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1402246382}
+  - component: {fileID: 1402246381}
+  m_Layer: 0
+  m_Name: BulletFactory
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1402246381
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1402246380}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bb8d5c70e1b6423aa562964628cbc52f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bulletPrefab: {fileID: 243408700185539643, guid: 0aead2b3484a753e4bf34ce73f798fcd, type: 3}
+--- !u!4 &1402246382
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1402246380}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 491, y: 241.5, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1522984885
 GameObject:
   m_ObjectHideFlags: 0
@@ -1096,3 +1141,4 @@ SceneRoots:
   - {fileID: 696528670}
   - {fileID: 1008685265}
   - {fileID: 133542949}
+  - {fileID: 1402246382}
